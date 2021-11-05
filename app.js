@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let answer = eval(expression)
   console.log(answer)
   document.querySelector('h3').innerHTML = answer
+  h5.append('=')
  }
 
 })
