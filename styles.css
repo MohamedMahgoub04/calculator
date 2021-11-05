@@ -12,6 +12,9 @@
  margin: 0;
  padding: 0;
 }
+*:focus{
+ outline: none;
+}
 body{
  background: url(https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png);
 }
@@ -97,4 +100,12 @@ h5{
 }
 h3{
  font-size: 2em;
+}
+
+#theme-div{
+ margin: 1.5em;
+}
+select{
+ border-radius: 4px;
+ text-align: center;
 }
