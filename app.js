@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
    }   
    console.log(li)
    
-   h5.append(x.getAttribute('data-op'))
+   h5.append(x.innerHTML)
    // console.log(x.innerhtml)
 
    }
