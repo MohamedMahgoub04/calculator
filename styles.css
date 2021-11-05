@@ -17,7 +17,7 @@ body{
 }
 main{
  animation-name: fall;
- animation-duration: 2s;
+ animation-duration: 1s;
  animation-fill-mode: forwards;
  border-radius: 30px;
  border: 1px solid black;
