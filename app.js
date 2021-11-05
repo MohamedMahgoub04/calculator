@@ -157,6 +157,12 @@ document.addEventListener('DOMContentLoaded', () => {
  }
  )
 
+ // Period
+ document.querySelector('#corner3').onclick = () => {
+   expression += '.'
+   h5.append('.')
+ }
+
  // Equal 
  document.querySelector('#equal').onclick = () => {
   console.log(expression)
@@ -167,7 +173,6 @@ document.addEventListener('DOMContentLoaded', () => {
  }
 
  // Theme
- 
  slt.onchange = () => {
   if (slt.value == 'red'){
     redtheme()
