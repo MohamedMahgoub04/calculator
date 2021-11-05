@@ -49,6 +49,23 @@ function greentheme() {
   document.querySelector('h5').style.color = '#004b23'
   document.querySelector('h3').style.color = '#004b23'
 }
+function browntheme() {
+  document.querySelectorAll('button').forEach(x => {
+    x.style.backgroundColor = '#d4a276'
+    x.style.color = "#583101"
+    x.style.border = '1px solid #583101'
+    x.onmouseover = () => {
+      x.style.backgroundColor = '#bc8a5f'
+    }
+    x.onmouseout = () => {
+      x.style.backgroundColor = '#d4a276'
+    }
+  })
+  document.querySelector('main').style.backgroundColor = '#583101'
+  document.querySelector('#display').style.backgroundColor = '#d4a276'
+  document.querySelector('h5').style.color = '#583101'
+  document.querySelector('h3').style.color = '#583101'
+}
 
 document.addEventListener('DOMContentLoaded', () => {
 //  Declaring variables and constants
@@ -106,6 +123,8 @@ document.addEventListener('DOMContentLoaded', () => {
     bluetheme()
   } else if (slt.value == 'green') {
     greentheme()
+  } else if (slt.value == 'brown') {
+    browntheme()
   }
 
   // switch (slt.value) {
