@@ -1,3 +1,12 @@
+@keyframes fall {
+ from {
+  margin-top: -50em;
+ }
+ to {
+  margin-top: 7em;
+ }
+}
+
 *{
  font-family: poppins;
  margin: 0;
@@ -7,6 +16,9 @@ body{
  background: url(https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png);
 }
 main{
+ animation-name: fall;
+ animation-duration: 2s;
+ animation-fill-mode: forwards;
  border-radius: 30px;
  border: 1px solid black;
  margin: 5em auto;
