@@ -1,32 +1,8 @@
 
-
-function add(a, b) {
- result = a + b
- console.log(result)
- return result
-}
-
-function subtract(a, b) {
- result = a - b
- console.log(result)
- return result
-}
-function multiply(a, b) {
- result = a * b
- console.log(result)
- return result
-}
-function divide(a, b) {
- result = a / b
- console.log(result)
- return result
-}
-
-
 document.addEventListener('DOMContentLoaded', () => {
- let h3 = document.querySelector('h3')
- let h5 = document.querySelector('h5')
- let operators = ['+', '-', '*', '/']
+//  Declaring variables and constants
+ const h3 = document.querySelector('h3')
+ const h5 = document.querySelector('h5')
  let expression = ''
 
  // Clear button
@@ -51,8 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
  })
 
- // Operands
- document.querySelectorAll('.operands').forEach(x => {
+ // Operators
+ document.querySelectorAll('.operators').forEach(x => {
   x.onclick = () => {
    expression += x.getAttribute('data-op')
    h5.append(x.innerHTML)
@@ -60,6 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
  }
  )
 
+ // Equal 
  document.querySelector('#equal').onclick = () => {
   console.log(expression)
   let answer = eval(expression)
