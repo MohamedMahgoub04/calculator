@@ -83,6 +83,23 @@ function purpletheme() {
   document.querySelector('h5').style.color = '#6247aa'
   document.querySelector('h3').style.color = '#6247aa'
 }
+function yellowtheme() {
+  document.querySelectorAll('button').forEach(x => {
+    x.style.backgroundColor = '#fca311'
+    x.style.color = "#14213d"
+    x.style.border = '1px solid #14213d'
+    x.onmouseover = () => {
+      x.style.backgroundColor = '#FDCE81'
+    }
+    x.onmouseout = () => {
+      x.style.backgroundColor = '#fca311'
+    }
+  })
+  document.querySelector('main').style.backgroundColor = '#14213d'
+  document.querySelector('#display').style.backgroundColor = '#fca311'
+  document.querySelector('h5').style.color = '#14213d'
+  document.querySelector('h3').style.color = '#14213d'
+}
 
 document.addEventListener('DOMContentLoaded', () => {
 //  Declaring variables and constants
@@ -144,6 +161,8 @@ document.addEventListener('DOMContentLoaded', () => {
     browntheme()
   } else if (slt.value == 'purple') {
     purpletheme()
+  } else if (slt.value == 'yellow') {
+    yellowtheme()
   }
 
   // switch (slt.value) {
