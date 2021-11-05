@@ -1,3 +1,20 @@
+function defaulttheme() {
+  document.querySelectorAll('button').forEach(x => {
+    x.style.backgroundColor = '#ced4da'
+    x.style.color = "#212529"
+    x.style.border = '1px solid #212529'
+    x.onmouseover = () => {
+      x.style.backgroundColor = '#adb5bd'
+    }
+    x.onmouseout = () => {
+      x.style.backgroundColor = '#ced4da'
+    }
+  })
+  document.querySelector('main').style.backgroundColor = '#212529'
+  document.querySelector('#display').style.backgroundColor = '#ced4da'
+  document.querySelector('h5').style.color = '#212529'
+  document.querySelector('h3').style.color = '#212529'
+}
 function bluetheme() {
   document.querySelectorAll('button').forEach(x => {
     x.style.backgroundColor = '#90e0ef'
@@ -100,23 +117,7 @@ function yellowtheme() {
   document.querySelector('h5').style.color = '#14213d'
   document.querySelector('h3').style.color = '#14213d'
 }
-function monochrometheme() {
-  document.querySelectorAll('button').forEach(x => {
-    x.style.backgroundColor = '#ced4da'
-    x.style.color = "#212529"
-    x.style.border = '1px solid #212529'
-    x.onmouseover = () => {
-      x.style.backgroundColor = '#adb5bd'
-    }
-    x.onmouseout = () => {
-      x.style.backgroundColor = '#ced4da'
-    }
-  })
-  document.querySelector('main').style.backgroundColor = '#212529'
-  document.querySelector('#display').style.backgroundColor = '#ced4da'
-  document.querySelector('h5').style.color = '#212529'
-  document.querySelector('h3').style.color = '#212529'
-}
+
 
 document.addEventListener('DOMContentLoaded', () => {
 //  Declaring variables and constants
@@ -180,8 +181,8 @@ document.addEventListener('DOMContentLoaded', () => {
     purpletheme()
   } else if (slt.value == 'yellow') {
     yellowtheme()
-  } else if (slt.value == 'monochrome') {
-    monochrometheme()
+  } else if (slt.value == 'default') {
+    defaulttheme()
   }
 
   // switch (slt.value) {

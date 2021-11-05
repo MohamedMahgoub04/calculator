@@ -23,9 +23,9 @@ main{
  animation-duration: 1s;
  animation-fill-mode: forwards;
  border-radius: 30px;
- border: 1px solid black;
+ border: 1px solid 212529;
  margin: 5em auto;
- background-color: #14213d;
+ background-color: #212529;
  width: 25vw;
  height: 65vh;
  display: flex;
@@ -46,7 +46,7 @@ section{
  border-radius: 10px;
  /* display: none; */
  /* border: 1px solid yellow; */
- background-color: #90e0ef;
+ background-color: #ced4da;
  height: 25%;
  width: 100%;
  display: flex;
@@ -62,14 +62,14 @@ section{
 
 button{
  /* border-radius: 5px; */
- color: #14213d;
- background-color: #90e0ef;
- border: 1px solid #14213d;
+ color: #212529;
+ background-color: #ced4da;
+ border: 1px solid #212529;
  font-size: 30px
  /* height: 50px; */
 }
 button:hover{
- background-color: #1DBBEC;
+ background-color: #adb5bd;
 }
 
 #clear{
