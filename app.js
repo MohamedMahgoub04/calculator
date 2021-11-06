@@ -15,7 +15,7 @@ function defaulttheme() {
   document.querySelector('h5').style.color = '#212529'
   document.querySelector('h3').style.color = '#212529'
 }
-function bluetheme() {
+function navytheme() {
   document.querySelectorAll('button').forEach(x => {
     x.style.backgroundColor = '#89c2d9'
     x.style.color = "#012a4a"
@@ -32,7 +32,7 @@ function bluetheme() {
   document.querySelector('h5').style.color = '#012a4a'
   document.querySelector('h3').style.color = '#012a4a'
 }
-function redtheme() {
+function rosetheme() {
   document.querySelectorAll('button').forEach(x => {
     x.style.backgroundColor = '#EF7598'
     x.style.color = "#641220"
@@ -49,7 +49,7 @@ function redtheme() {
   document.querySelector('h5').style.color = '#641220'
   document.querySelector('h3').style.color = '#641220'
 }
-function greentheme() {
+function olivetheme() {
   document.querySelectorAll('button').forEach(x => {
     x.style.backgroundColor = '#97BC62FF'
     x.style.color = "#2C5F2D"
@@ -66,7 +66,7 @@ function greentheme() {
   document.querySelector('h5').style.color = '#2C5F2D'
   document.querySelector('h3').style.color = '#2C5F2D'
 }
-function browntheme() {
+function coffeetheme() {
   document.querySelectorAll('button').forEach(x => {
     x.style.backgroundColor = '#d4a276'
     x.style.color = "#583101"
@@ -83,7 +83,7 @@ function browntheme() {
   document.querySelector('h5').style.color = '#583101'
   document.querySelector('h3').style.color = '#583101'
 }
-function purpletheme() {
+function lavendertheme() {
   document.querySelectorAll('button').forEach(x => {
     x.style.backgroundColor = '#b185db'
     x.style.color = "#6247aa"
@@ -117,7 +117,7 @@ function orangetheme() {
   document.querySelector('h5').style.color = '#14213d'
   document.querySelector('h3').style.color = '#14213d'
 }
-function yellowtheme() {
+function lemontheme() {
   document.querySelectorAll('button').forEach(x => {
     x.style.backgroundColor = '#f3ca20'
     x.style.color = "#101820FF"
@@ -208,22 +208,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
  // Theme
  slt.onchange = () => {
-  if (slt.value == 'red'){
-    redtheme()
-  } else if (slt.value == 'blue') {
-    bluetheme()
-  } else if (slt.value == 'green') {
-    greentheme()
-  } else if (slt.value == 'brown') {
-    browntheme()
-  } else if (slt.value == 'purple') {
-    purpletheme()
+  if (slt.value == 'rose'){
+    rosetheme()
+  } else if (slt.value == 'navy') {
+    navytheme()
+  } else if (slt.value == 'olive') {
+    olivetheme()
+  } else if (slt.value == 'coffee') {
+    coffeetheme()
+  } else if (slt.value == 'lavender') {
+    lavendertheme()
   } else if (slt.value == 'orange') {
     orangetheme()
   } else if (slt.value == 'default') {
     defaulttheme()
-  } else if (slt.value == 'yellow') {
-    yellowtheme()
+  } else if (slt.value == 'lemon') {
+    lemontheme()
   } else if (slt.value == 'cherry') {
     cherrytheme()
   } 
