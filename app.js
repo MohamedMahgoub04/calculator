@@ -1,160 +1,36 @@
-function defaulttheme() {
+// Theme function
+function theme(colorList) {
   document.querySelectorAll('button').forEach(x => {
-    x.style.backgroundColor = '#ced4da'
-    x.style.color = "#212529"
-    x.style.border = '1px solid #212529'
+    x.style.backgroundColor = colorList[1]
+    x.style.color = colorList[0]
+    x.style.border = `1px solid ${colorList[0]}`
     x.onmouseover = () => {
-      x.style.backgroundColor = '#adb5bd'
+      x.style.backgroundColor = colorList[2]
     }
     x.onmouseout = () => {
-      x.style.backgroundColor = '#ced4da'
+      x.style.backgroundColor = colorList[1]
     }
   })
-  document.querySelector('main').style.backgroundColor = '#212529'
-  document.querySelector('#display').style.backgroundColor = '#ced4da'
-  document.querySelector('h5').style.color = '#212529'
-  document.querySelector('h3').style.color = '#212529'
-}
-function navytheme() {
-  document.querySelectorAll('button').forEach(x => {
-    x.style.backgroundColor = '#89c2d9'
-    x.style.color = "#012a4a"
-    x.style.border = '1px solid #012a4a'
-    x.onmouseover = () => {
-      x.style.backgroundColor = '#41B0FE'
-    }
-    x.onmouseout = () => {
-      x.style.backgroundColor = '#89c2d9'
-    }
-  })
-  document.querySelector('main').style.backgroundColor = '#012a4a'
-  document.querySelector('#display').style.backgroundColor = '#89c2d9'
-  document.querySelector('h5').style.color = '#012a4a'
-  document.querySelector('h3').style.color = '#012a4a'
-}
-function rosetheme() {
-  document.querySelectorAll('button').forEach(x => {
-    x.style.backgroundColor = '#EF7598'
-    x.style.color = "#641220"
-    x.style.border = '1px solid #641220'
-    x.onmouseover = () => {
-      x.style.backgroundColor = '#da1e37'
-    }
-    x.onmouseout = () => {
-      x.style.backgroundColor = '#EF7598'
-    }
-  })
-  document.querySelector('main').style.backgroundColor = '#641220'
-  document.querySelector('#display').style.backgroundColor = '#EF7598'
-  document.querySelector('h5').style.color = '#641220'
-  document.querySelector('h3').style.color = '#641220'
-}
-function olivetheme() {
-  document.querySelectorAll('button').forEach(x => {
-    x.style.backgroundColor = '#97BC62FF'
-    x.style.color = "#2C5F2D"
-    x.style.border = '1px solid #2C5F2D'
-    x.onmouseover = () => {
-      x.style.backgroundColor = '#00CF61'
-    }
-    x.onmouseout = () => {
-      x.style.backgroundColor = '#97BC62FF'
-    }
-  })
-  document.querySelector('main').style.backgroundColor = '#2C5F2D'
-  document.querySelector('#display').style.backgroundColor = '#97BC62FF'
-  document.querySelector('h5').style.color = '#2C5F2D'
-  document.querySelector('h3').style.color = '#2C5F2D'
-}
-function coffeetheme() {
-  document.querySelectorAll('button').forEach(x => {
-    x.style.backgroundColor = '#d4a276'
-    x.style.color = "#583101"
-    x.style.border = '1px solid #583101'
-    x.onmouseover = () => {
-      x.style.backgroundColor = '#bc8a5f'
-    }
-    x.onmouseout = () => {
-      x.style.backgroundColor = '#d4a276'
-    }
-  })
-  document.querySelector('main').style.backgroundColor = '#583101'
-  document.querySelector('#display').style.backgroundColor = '#d4a276'
-  document.querySelector('h5').style.color = '#583101'
-  document.querySelector('h3').style.color = '#583101'
-}
-function lavendertheme() {
-  document.querySelectorAll('button').forEach(x => {
-    x.style.backgroundColor = '#b185db'
-    x.style.color = "#6247aa"
-    x.style.border = '1px solid #6247aa'
-    x.onmouseover = () => {
-      x.style.backgroundColor = '#a06cd5'
-    }
-    x.onmouseout = () => {
-      x.style.backgroundColor = '#b185db'
-    }
-  })
-  document.querySelector('main').style.backgroundColor = '#6247aa'
-  document.querySelector('#display').style.backgroundColor = '#b185db'
-  document.querySelector('h5').style.color = '#6247aa'
-  document.querySelector('h3').style.color = '#6247aa'
-}
-function orangetheme() {
-  document.querySelectorAll('button').forEach(x => {
-    x.style.backgroundColor = '#fca311'
-    x.style.color = "#14213d"
-    x.style.border = '1px solid #14213d'
-    x.onmouseover = () => {
-      x.style.backgroundColor = '#FDCE81'
-    }
-    x.onmouseout = () => {
-      x.style.backgroundColor = '#fca311'
-    }
-  })
-  document.querySelector('main').style.backgroundColor = '#14213d'
-  document.querySelector('#display').style.backgroundColor = '#fca311'
-  document.querySelector('h5').style.color = '#14213d'
-  document.querySelector('h3').style.color = '#14213d'
-}
-function lemontheme() {
-  document.querySelectorAll('button').forEach(x => {
-    x.style.backgroundColor = '#f3ca20'
-    x.style.color = "#101820FF"
-    x.style.border = '1px solid #101820FF'
-    x.onmouseover = () => {
-      x.style.backgroundColor = '#FBECB0'
-    }
-    x.onmouseout = () => {
-      x.style.backgroundColor = '#f3ca20'
-    }
-  })
-  document.querySelector('main').style.backgroundColor = '#101820FF'
-  document.querySelector('#display').style.backgroundColor = '#f3ca20'
-  document.querySelector('h5').style.color = '#101820FF'
-  document.querySelector('h3').style.color = '#101820FF'
-}
-function cherrytheme() {
-  document.querySelectorAll('button').forEach(x => {
-    x.style.backgroundColor = '#FCF6F5FF'
-    x.style.color = "#990011FF"
-    x.style.border = '1px solid #990011FF'
-    x.onmouseover = () => {
-      x.style.backgroundColor = '#FF7181'
-    }
-    x.onmouseout = () => {
-      x.style.backgroundColor = '#FCF6F5FF'
-    }
-  })
-  document.querySelector('main').style.backgroundColor = '#990011FF'
-  document.querySelector('#display').style.backgroundColor = '#FCF6F5FF'
-  document.querySelector('h5').style.color = '#990011FF'
-  document.querySelector('h3').style.color = '#990011FF'
+  document.querySelector('main').style.backgroundColor = colorList[0]
+  document.querySelector('#display').style.backgroundColor = colorList[1]
+  document.querySelector('h5').style.color = colorList[0]
+  document.querySelector('h3').style.color = colorList[0]
 }
 
+// Themes [main, background, hover]
+const defaulttheme = ['#212529', '#ced4da', '#adb5bd']
+const navy = ['#012a4a', '#89c2d9', '#41B0FE']
+const rose = ['#641220', '#EF7598', '#da1e37']
+const olive = ['#2C5F2D', '#97BC62FF', '#00CF61']
+const coffee = ['#583101', '#d4a276', '#bc8a5f']
+const lavender = ['#6247aa', '#b185db', '#a06cd5']
+const orange = ['#14213d', '#fca311', '#FDCE81']
+const lemon = ['#101820FF', '#f3ca20', '#FBECB0']
+const cherry = ['#990011FF', '#FCF6F5FF', '#FF7181']
 
 document.addEventListener('DOMContentLoaded', () => {
-//  Declaring variables and constants
+
+ //  Declaring variables and constants
  const h3 = document.querySelector('h3')
  const h5 = document.querySelector('h5')
  const slt = document.querySelector('select')
@@ -209,33 +85,24 @@ document.addEventListener('DOMContentLoaded', () => {
  // Theme
  slt.onchange = () => {
   if (slt.value == 'rose'){
-    rosetheme()
+    theme(rose)
   } else if (slt.value == 'navy') {
-    navytheme()
+    theme(navy)
   } else if (slt.value == 'olive') {
-    olivetheme()
+    theme(olive)
   } else if (slt.value == 'coffee') {
-    coffeetheme()
+    theme(coffee)
   } else if (slt.value == 'lavender') {
-    lavendertheme()
+    theme(lavender)
   } else if (slt.value == 'orange') {
-    orangetheme()
+    theme(orange)
   } else if (slt.value == 'default') {
-    defaulttheme()
+    theme(defaulttheme)
   } else if (slt.value == 'lemon') {
-    lemontheme()
+    theme(lemon)
   } else if (slt.value == 'cherry') {
-    cherrytheme()
+    theme(cherry)
   } 
-
-  // switch (slt.value) {
-  //   case 'blue':
-  //     console.log('bluu')
-  //     bluetheme()
-  //   case 'red':
-  //     redtheme()
-
-  // }
 
  }
 })
