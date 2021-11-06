@@ -84,25 +84,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
  // Theme
  slt.onchange = () => {
-  if (slt.value == 'rose'){
-    theme(rose)
-  } else if (slt.value == 'navy') {
-    theme(navy)
-  } else if (slt.value == 'olive') {
-    theme(olive)
-  } else if (slt.value == 'coffee') {
-    theme(coffee)
-  } else if (slt.value == 'lavender') {
-    theme(lavender)
-  } else if (slt.value == 'orange') {
-    theme(orange)
-  } else if (slt.value == 'default') {
-    theme(defaulttheme)
-  } else if (slt.value == 'lemon') {
-    theme(lemon)
-  } else if (slt.value == 'cherry') {
-    theme(cherry)
-  } 
+  switch (slt.value) {
+    case 'default':
+      theme(defaulttheme)
+      break
+    case 'rose':
+      theme(rose)
+      break
+    case 'navy':
+      theme(navy)
+      break
+    case 'olive':
+      theme(olive)
+      break
+    case 'coffee':
+      theme(coffee)
+      break
+    case 'lavender':
+      theme(lavender)
+      break
+    case 'orange':
+      theme(orange)
+      break
+    case 'lemon':
+      theme(lemon)
+      break
+    case 'cherry':
+      theme(cherry)
+      break
+  }
 
  }
 })
