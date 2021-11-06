@@ -15,8 +15,12 @@
 *:focus{
  outline: none;
 }
+/* *::selection{
+ background-color: transparent;
+} */
 body{
  background: url(https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png);
+ user-select: none;
 }
 main{
  animation-name: fall;
