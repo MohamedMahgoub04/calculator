@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
  }
  )
 
- // Period
+ // Decimal point
  document.querySelector('#corner3').onclick = () => {
    expression += '.'
    h5.append('.')
