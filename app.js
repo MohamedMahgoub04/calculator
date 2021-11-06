@@ -17,20 +17,20 @@ function defaulttheme() {
 }
 function bluetheme() {
   document.querySelectorAll('button').forEach(x => {
-    x.style.backgroundColor = '#90e0ef'
-    x.style.color = "#14213d"
-    x.style.border = '1px solid #14213d'
+    x.style.backgroundColor = '#89c2d9'
+    x.style.color = "#012a4a"
+    x.style.border = '1px solid #012a4a'
     x.onmouseover = () => {
-      x.style.backgroundColor = '#1DBBEC'
+      x.style.backgroundColor = '#41B0FE'
     }
     x.onmouseout = () => {
-      x.style.backgroundColor = '#90e0ef'
+      x.style.backgroundColor = '#89c2d9'
     }
   })
-  document.querySelector('main').style.backgroundColor = '#14213d'
-  document.querySelector('#display').style.backgroundColor = '#90e0ef'
-  document.querySelector('h5').style.color = '#14213d'
-  document.querySelector('h3').style.color = '#14213d'
+  document.querySelector('main').style.backgroundColor = '#012a4a'
+  document.querySelector('#display').style.backgroundColor = '#89c2d9'
+  document.querySelector('h5').style.color = '#012a4a'
+  document.querySelector('h3').style.color = '#012a4a'
 }
 function redtheme() {
   document.querySelectorAll('button').forEach(x => {
