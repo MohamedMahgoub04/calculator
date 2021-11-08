@@ -22,6 +22,24 @@ body{
  background: url(https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png);
  user-select: none;
 }
+
+header{
+ margin: auto;
+ width: 99%;
+ /* border: 1px solid black; */
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: space-between;
+}
+
+#darkmode-div{
+ margin: 0 1.5em;
+}
+#crescent:hover{
+ cursor: pointer;
+}
+
 main{
  animation-name: fall;
  animation-duration: 3s;

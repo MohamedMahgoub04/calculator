@@ -1,3 +1,4 @@
+
 // Theme function
 function theme(colorList) {
   document.querySelectorAll('button').forEach(x => {
@@ -18,31 +19,87 @@ function theme(colorList) {
 }
 
 // Themes [main, background, hover]
-const defaulttheme = ['#212529', '#ced4da', '#adb5bd']
-const navy = ['#012a4a', '#89c2d9', '#41B0FE']
-const rose = ['#641220', '#EF7598', '#da1e37']
-const olive = ['#2C5F2D', '#97BC62FF', '#00CF61']
-const coffee = ['#583101', '#d4a276', '#bc8a5f']
-const lavender = ['#6247aa', '#b185db', '#a06cd5']
-const orange = ['#14213d', '#fca311', '#FDCE81']
-const lemon = ['#101820FF', '#f3ca20', '#FBECB0']
-const cherry = ['#990011FF', '#FCF6F5FF', '#FF7181']
+// let defaulttheme = ['#212529', '#ced4da', '#adb5bd']
+// const navy = ['#012a4a', '#89c2d9', '#41B0FE']
+// const rose = ['#641220', '#EF7598', '#da1e37']
+// const olive = ['#2C5F2D', '#97BC62FF', '#00CF61']
+// const coffee = ['#583101', '#d4a276', '#bc8a5f']
+// const lavender = ['#6247aa', '#b185db', '#a06cd5']
+// const orange = ['#14213d', '#fca311', '#FDCE81']
+// const lemon = ['#101820FF', '#f3ca20', '#FBECB0']
+// const cherry = ['#990011FF', '#FCF6F5FF', '#FF7181']
+
+let themes = {
+  defaulttheme: ['#212529', '#ced4da', '#adb5bd'],
+  navy: ['#012a4a', '#89c2d9', '#41B0FE'],
+  rose: ['#641220', '#EF7598', '#da1e37'],
+  olive: ['#2C5F2D', '#97BC62FF', '#00CF61'],
+  coffee: ['#583101', '#d4a276', '#bc8a5f'],
+  lavender: ['#6247aa', '#C9BFE4', '#AB9BD5'],
+  orange: ['#14213d', '#fca311', '#FDCE81'],
+  lemon: ['#101820FF', '#f3ca20', '#FBECB0'],
+  cherry: ['#990011FF', '#FCF6F5FF', '#FF7181']
+}
+
+// Dark theme
+function darkMode(bool) {
+  const textColor = 'white'
+  if (bool) {
+    // document.querySelector('body').style.background = "#212121"
+    // random-grey-variations
+    // stardust
+    // tasky
+    // xv
+    
+    document.querySelector('body').style.background = "url('https://www.transparenttextures.com/patterns/tasky.png')"
+    document.querySelector('body').style.backgroundColor = '#212121'
+    document.querySelector('label').style.color = textColor
+    document.querySelector('p').style.color = textColor
+    document.querySelector('#crescent').src = 'darkmode_on.gif'
+    document.querySelector('#github').src = 'github_dark.gif'
+  } else {
+    document.querySelector('body').style.background = "url(https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png)"
+    document.querySelector('label').style.color = '#212121'
+    document.querySelector('p').style.color = '#212121'
+    document.querySelector('#crescent').src = 'darkmode_off.gif'
+    document.querySelector('#github').src = 'github.png' 
+  }
+}
 
 document.addEventListener('DOMContentLoaded', () => {
+
  // Keyboard
  addEventListener('keydown', (event) => {
   let key = 'k' + event.key
-  // alert(key)
-  // document.querySelector(`[data-op=${event.key}]`)
   document.querySelector(`[data-val=${key}]`).click()
-  // alert(event.key)
  })
 
  //  Declaring variables and constants
+ const darkToggle = document.querySelector('#crescent')
+ let darkClicked = true
+ const slt = document.querySelector('select')
  const h3 = document.querySelector('h3')
  const h5 = document.querySelector('h5')
- const slt = document.querySelector('select')
+ 
  let expression = ''
+
+ // Dark mode
+ darkToggle.onclick = () => {
+  if (darkClicked) {
+    darkMode(true)
+    darkClicked = false
+    themes.defaulttheme = ['#626262', '#f7f7f7', '#dedede']
+    theme(themes.defaulttheme)
+    themes.orange = ['#D78703', '#FEE2B4', '#FDCE81']
+    themes.lemon = ['#D5AD0B', '#FBEFBA', '#F8E48A']
+  } else {
+    darkMode(false)
+    darkClicked = true
+    themes.defaulttheme = ['#212529', '#ced4da', '#adb5bd']
+    theme(themes.defaulttheme)
+    themes.orange = ['#14213d', '#fca311', '#FDCE81']
+    themes.lemon = ['#101820FF', '#f3ca20', '#FBECB0']
+ }}
 
  // Clear button
  document.querySelector('button').onclick = () => {
@@ -57,7 +114,6 @@ document.addEventListener('DOMContentLoaded', () => {
   expression = expression.slice(0, -1)
  }
 
- 
  // Numbers
  document.querySelectorAll('.numbers').forEach(x => {
   x.onclick = () => {
@@ -90,37 +146,37 @@ document.addEventListener('DOMContentLoaded', () => {
   h5.append('=')
  }
 
- // Theme
+ // Themes
  slt.onchange = () => {
   switch (slt.value) {
     case 'default':
-      theme(defaulttheme)
-      break
+     theme(themes.defaulttheme)
+     break
     case 'rose':
-      theme(rose)
-      break
+     theme(themes.rose)
+     break
     case 'navy':
-      theme(navy)
-      break
+     theme(themes.navy)
+     break
     case 'olive':
-      theme(olive)
-      break
+     theme(themes.olive)
+     break
     case 'coffee':
-      theme(coffee)
-      break
+     theme(themes.coffee)
+     break
     case 'lavender':
-      theme(lavender)
-      break
+     theme(themes.lavender)
+     break
     case 'orange':
-      theme(orange)
-      break
+     theme(themes.orange)
+     break
     case 'lemon':
-      theme(lemon)
-      break
+     theme(themes.lemon)
+     break
     case 'cherry':
-      theme(cherry)
+      theme(themes.cherry)
       break
   }
-
  }
+
 })
