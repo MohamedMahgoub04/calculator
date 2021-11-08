@@ -29,6 +29,14 @@ const lemon = ['#101820FF', '#f3ca20', '#FBECB0']
 const cherry = ['#990011FF', '#FCF6F5FF', '#FF7181']
 
 document.addEventListener('DOMContentLoaded', () => {
+ // Keyboard
+ addEventListener('keydown', (event) => {
+  let key = 'k' + event.key
+  // alert(key)
+  // document.querySelector(`[data-op=${event.key}]`)
+  document.querySelector(`[data-val=${key}]`).click()
+  // alert(event.key)
+ })
 
  //  Declaring variables and constants
  const h3 = document.querySelector('h3')
