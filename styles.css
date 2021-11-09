@@ -93,7 +93,8 @@ button{
  color: #212529;
  background-color: #ced4da;
  border: 1px solid #212529;
- font-size: 30px
+ /* font-size: 30px */
+ font-size: 2vmax;
  /* height: 50px; */
 }
 button:hover{
@@ -177,4 +178,56 @@ select{
 }
 a, img{
  padding-top: 2px;
+}
+
+/* Responsive design */
+@media only screen and (min-width: 1200px) {
+ button{
+  font-size: 30px;
+ }
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+ main{
+  width: 40vw;
+ }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px){
+ main{
+  width: 50vw;
+ }
+}
+
+@media screen and (min-width: 600px) and (max-width: 768px) {
+ main{
+  width: 60vw;
+  /* height: 60vh; */
+ }
+}
+
+@media screen and (max-width: 600px) {
+ @keyframes fall-mobile {
+  from{
+   margin-top: -50em;
+  }
+  to{
+   margin-top: 9vh;
+  }
+ }
+ body{
+  overflow-y: hidden;
+ }
+ main{
+  animation: fall-mobile 3s forwards;
+  width: 85vw;
+  /* width: 100%; */
+  /* height: auto; */
+  /* margin-top: 7em; */
+  /* height: 65vh; */
+ }
+ button{
+  font-size: 25px;
+ }
+ h5,h3{
+  margin: 10px;
+ }
 }
