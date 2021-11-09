@@ -147,7 +147,8 @@ document.addEventListener('DOMContentLoaded', () => {
  // Equal 
  document.querySelector('#equal').onclick = () => {
   console.log(expression)
-  let answer = eval(expression)
+  let answer = eval(expression.toString())
+  answer = Math.round((answer + Number.EPSILON) * 100) / 100
   console.log(answer)
   document.querySelector('h3').innerHTML = answer
   h5.append('=')
