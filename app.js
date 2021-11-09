@@ -208,4 +208,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
  }
 
+ //
+//  document.querySelector('body').onclick = () => {
+//    document.querySelector('#clear').click()
+//  }
+
 })
