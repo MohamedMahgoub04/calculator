@@ -80,6 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
  const slt = document.querySelector('select')
  const h3 = document.querySelector('h3')
  const h5 = document.querySelector('h5')
+ let addDecimal = true
  
  let expression = ''
 
@@ -106,12 +107,15 @@ document.addEventListener('DOMContentLoaded', () => {
   h3.innerHTML = ''
   h5.innerHTML = ''
   expression = ''
+  addDecimal = true
  }
 
  // Delete button
  document.querySelector('#delete').onclick = () => {
   h5.innerHTML = h5.innerHTML.slice(0, -1) 
   expression = expression.slice(0, -1)
+  if (h5.innerHTML.includes('.')) return
+  addDecimal = true
  }
 
  // Numbers
@@ -127,14 +131,17 @@ document.addEventListener('DOMContentLoaded', () => {
   x.onclick = () => {
    expression += x.getAttribute('data-op')
    h5.append(x.innerHTML)
+   addDecimal = true
   }
  }
  )
 
  // Decimal point
  document.querySelector('#corner3').onclick = () => {
+   if (!addDecimal) return
    expression += '.'
    h5.append('.')
+   addDecimal = false
  }
 
  // Equal 
