@@ -121,6 +121,9 @@ document.addEventListener('DOMContentLoaded', () => {
  // Numbers
  document.querySelectorAll('.numbers').forEach(x => {
   x.onclick = () => {
+   if (h5.innerHTML.includes('=')) {
+    h5.innerHTML = h5.innerHTML.slice(0, -1)
+   }
    expression += x.innerHTML
    h5.append(x.innerHTML)
   }
@@ -129,6 +132,9 @@ document.addEventListener('DOMContentLoaded', () => {
  // Operators
  document.querySelectorAll('.operators').forEach(x => {
   x.onclick = () => {
+   if (h5.innerHTML.includes('=')) {
+    h5.innerHTML = h5.innerHTML.slice(0, -1)
+   }
    expression += x.getAttribute('data-op')
    h5.append(x.innerHTML)
    addDecimal = true
@@ -150,6 +156,9 @@ document.addEventListener('DOMContentLoaded', () => {
   let answer = eval(expression.toString())
   answer = Math.round((answer + Number.EPSILON) * 100) / 100
   console.log(answer)
+  if (h5.innerHTML.includes('=')) {
+    h5.innerHTML = h5.innerHTML.slice(0, -1)
+  }
   document.querySelector('h3').innerHTML = answer
   h5.append('=')
  }
