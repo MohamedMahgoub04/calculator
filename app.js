@@ -121,6 +121,9 @@ document.addEventListener('DOMContentLoaded', () => {
  // Numbers
  document.querySelectorAll('.numbers').forEach(x => {
   x.onclick = () => {
+   if (h3.innerHTML != '') {
+    document.querySelector('#clear').click()
+   }
    if (h5.innerHTML.includes('=')) {
     h5.innerHTML = h5.innerHTML.slice(0, -1)
    }
@@ -132,6 +135,10 @@ document.addEventListener('DOMContentLoaded', () => {
  // Operators
  document.querySelectorAll('.operators').forEach(x => {
   x.onclick = () => {
+   if (h3.innerHTML != '') {
+    h5.innerHTML = h3.innerHTML
+    h3.innerHTML = ''
+   }
    if (h5.innerHTML.includes('=')) {
     h5.innerHTML = h5.innerHTML.slice(0, -1)
    }
@@ -144,7 +151,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
  // Decimal point
  document.querySelector('#corner3').onclick = () => {
+   if (h3.innerHTML != '') {
+    document.querySelector('#clear').click()
+   }
    if (!addDecimal) return
+   
    expression += '.'
    h5.append('.')
    addDecimal = false
@@ -160,6 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
     h5.innerHTML = h5.innerHTML.slice(0, -1)
   }
   document.querySelector('h3').innerHTML = answer
+  expression = answer
   h5.append('=')
  }
 
